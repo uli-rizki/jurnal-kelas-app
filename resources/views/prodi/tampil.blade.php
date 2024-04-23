@@ -6,12 +6,12 @@
         <h1>Aplikasi Jurnal Kelas</h1>
         <h3>Data Program Studi</h3>
         <div class="add-button">
-            <a href="/jurnal_kelas/prodi/tambah.php">
+            <a href="/prodi/tambah">
                 <button>Tambah Data</button>
             </a>
         </div>
 
-        <table>
+        <table border="1">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -21,6 +21,17 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach($prodi as $val)
+                <tr>
+                    <td>{{ $val->prodi_id }}</td>
+                    <td>{{ $val->nama_prodi }}</td>
+                    <td>{{ $val->nama_pendek }}</td>
+                    <td>
+                        <a href="#edit">Edit</a>
+                        <a href="#hapus">Hapus</a>
+                    </td>
+                </tr>
+                @endforeach
             </tbody>
         </table>
     </body>
