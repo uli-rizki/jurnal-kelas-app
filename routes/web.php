@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 Route::get('/prodi', [ProdiController::class, 'index']);
 Route::get('/prodi/tambah', [ProdiController::class, 'tambah']);
+Route::post('/prodi/simpan', [ProdiController::class, 'simpan']);
