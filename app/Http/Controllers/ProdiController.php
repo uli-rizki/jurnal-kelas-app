@@ -20,6 +20,13 @@ class ProdiController extends Controller
         return view('prodi.tambah');
     }
 
+    public function edit($prodi_id)
+    {
+        $prodi = Prodi::find($prodi_id);
+
+        return view('prodi.edit', compact('prodi'));
+    }
+
     public function simpan(Request $request)
     {
         $validation = $request->validate([

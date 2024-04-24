@@ -27,7 +27,7 @@
                     <td>{{ $val->nama_prodi }}</td>
                     <td>{{ $val->nama_pendek }}</td>
                     <td>
-                        <a href="#edit">Edit</a>
+                        <a href="/prodi/edit/{{ $val->prodi_id }}">Edit</a>
                         <a href="#hapus">Hapus</a>
                     </td>
                 </tr>
