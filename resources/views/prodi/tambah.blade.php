@@ -22,6 +22,7 @@
         @endif
 
         <form action="/prodi/simpan" method="POST">
+            @csrf
             <table>
                 <tbody>
                     <tr>
