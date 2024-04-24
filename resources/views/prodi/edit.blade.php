@@ -21,7 +21,7 @@
         </div>
         @endif
 
-        <form action="/prodi/update" method="POST">
+        <form action="/prodi/update/{{ $prodi->prodi_id }}" method="POST">
             @csrf
             <table>
                 <tbody>

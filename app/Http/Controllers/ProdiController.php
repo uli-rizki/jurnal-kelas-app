@@ -52,4 +52,31 @@ class ProdiController extends Controller
             return redirect()->back()->withError('Data Gagal disimpan');
         }
     }
+
+    public function update(Request $request, $prodi_id)
+    {
+        $validation = $request->validate([
+            'nama_prodi' => 'required',
+            'nama_pendek' => 'required'
+        ]);
+
+        $prodi = Prodi::find($prodi_id);
+
+        if(! $prodi) {
+            return redirect()->back()->withError('Data tidak ditemukan');
+        }
+
+        $prodi->nama_prodi = $request->nama_prodi;
+        $prodi->nama_pendek = $request->nama_pendek;
+
+        $update = $prodi->save();
+
+        if($update) {
+            # Jika simpan bernilai true
+            return redirect()->back()->withSuccess('Data berhasil disimpan');
+        } else {
+            // Jika simpan bernilai salah
+            return redirect()->back()->withError('Data Gagal disimpan');
+        }
+    }
 }

@@ -22,3 +22,4 @@ Route::get('/prodi', [ProdiController::class, 'index']);
 Route::get('/prodi/tambah', [ProdiController::class, 'tambah']);
 Route::get('/prodi/edit/{prodi_id}', [ProdiController::class, 'edit']);
 Route::post('/prodi/simpan', [ProdiController::class, 'simpan']);
+Route::post('/prodi/update/{prodi_id}', [ProdiController::class, 'update']);
