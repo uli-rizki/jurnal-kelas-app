@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\ProdiController;
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,5 @@ Route::get('/prodi/tambah', [ProdiController::class, 'tambah']);
 Route::get('/prodi/edit/{prodi_id}', [ProdiController::class, 'edit']);
 Route::post('/prodi/simpan', [ProdiController::class, 'simpan']);
 Route::post('/prodi/update/{prodi_id}', [ProdiController::class, 'update']);
+
+Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
