@@ -28,7 +28,7 @@
                     <td>{{ $val->nim }}</td>
                     <td>{{ $val->nama_lengkap }}</td>
                     <td>{{ $val->jenis_kelamin }}</td>
-                    <td>{{ $val->prodi_id }}</td>
+                    <td>{{ $val->prodi->nama_prodi }}</td>
                     <td>{{ $val->aktif }}</td>
                     <td>
                         <a href="/mahasiswa/edit/{{ $val->mahasiswa_id }}">Edit</a>

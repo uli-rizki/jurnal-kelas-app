@@ -10,7 +10,12 @@ class MahasiswaController extends Controller
 {
     public function index()
     {
-        $mahasiswa = Mahasiswa::get();
+        $mahasiswa = Mahasiswa::with('prodi')->get();
+        /**
+         * SELECT * FROM mahasiswa
+         * JOIN prodi ON mahasiswa.prodi_id=prodi.prodi_id
+         */
+        // return response()->json($mahasiswa); exit;
 
         return view('mahasiswa.tampil', compact('mahasiswa'));
     }
