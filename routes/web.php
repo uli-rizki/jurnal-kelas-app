@@ -26,3 +26,5 @@ Route::post('/prodi/simpan', [ProdiController::class, 'simpan']);
 Route::post('/prodi/update/{prodi_id}', [ProdiController::class, 'update']);
 
 Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
+Route::get('/mahasiswa/tambah', [MahasiswaController::class, 'tambah']);
+Route::post('/mahasiswa/simpan', [MahasiswaController::class, 'simpan']);
