@@ -16,7 +16,7 @@ use App\Http\Controllers\ProdiController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 
 Route::get('/prodi', [ProdiController::class, 'index']);
